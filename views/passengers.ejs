@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Passengers</title>
+</head>
+
+<body>
+    <h1>Passengers</h1>
+    <p>there are <%= passengers.length %> passengers waiting.</p>
+    <ul>
+        <% passengers.forEach(function(passenger) { %>
+            <li>
+                <%= passenger.name %>
+                    (id: <%= passenger.id %>)
+                        wants to go to =>
+                        (<%= passenger.destination %>)
+                            <a href="/passengers/<%= passenger.id  %>">Detay</a>
+            </li>
+            <% }); %>
+    </ul>
+</body>
+
+</html>
