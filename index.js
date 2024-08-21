@@ -43,6 +43,10 @@ app.get('/passengers/:id', (req, res) => {
     }
 })
 
+app.get('/download', (req, res) => {
+    res.download(__dirname + '/passengersData.js')
+})
+
 
 app.listen(3000, () => {
     console.log('app listening on port 3000');
